@@ -4,9 +4,16 @@ const app = new Vue({
 
     data: {
 
-        listToDo: [],
+        listToDo: [
+        ],
 
-        toDoContent: "",
+
+        newObjectInput: {
+            text: "",
+            done:null,
+        },
+
+        toDoContent:""
 
     },
 
@@ -14,7 +21,8 @@ const app = new Vue({
 
         getInput(input){
             if(input != ""){
-                this.listToDo.push(input);
+                this.newObjectInput.text = input;
+                this.listToDo.push(this.newObjectInput);
                 this.toDoContent="";
             } else {
                 console.log("to-do item vuoto");
