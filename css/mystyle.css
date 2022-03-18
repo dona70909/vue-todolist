@@ -1,0 +1,29 @@
+header{
+    background-color: burlywood;
+    /* color: burlywood; */
+} 
+
+body{
+    background-image:url("../img/wall.jpg");
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+
+.my-btn-add{
+    background-color: rgb(202, 136, 49);
+    padding: .5rem;
+    border: none;
+    border-radius: 10px;
+    font-weight: 600;
+    box-shadow: 1.2px 1.2px 1.2px  rgb(134, 78, 5);
+}
+
+.my-todo-wrapper{
+    background-color: rgb(167, 82, 82);
+    border-radius: 10px;
+}
+
+.my-todo-item{
+    border-bottom: 1px solid black;
+    border-radius: 10px;
+}
