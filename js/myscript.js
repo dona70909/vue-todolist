@@ -54,7 +54,7 @@ const app = new Vue({
         },
 
         todoClick(){
-            this.newObjectInput.done = true;
+            newObject.done = true;
         },
 
         /**
