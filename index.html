@@ -52,7 +52,7 @@
                                 </p>
 
                                 <div>
-                                    <i @click="todoClick(index)" :class="(item.done)? 'color-green' : '' " class="bi bi-check-circle"></i>
+                                    <i @dblclick=" todoDblClick(index)" @click="todoClick(index)" :class="(item.done)? 'color-green' : '' " class="bi bi-check-circle"></i>
                                     <i @click="removeInput(index)" class="bi bi-trash-fill"></i>
                                 </div>
                                 

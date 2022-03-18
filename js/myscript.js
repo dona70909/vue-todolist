@@ -7,10 +7,9 @@ const app = new Vue({
         listToDo: [
         ],
         
-        // * prendo l'input 
+        
         toDoContent:"",
         
-        isDone:"",
         
     },
     
@@ -40,7 +39,13 @@ const app = new Vue({
             this.listToDo[index].done = isClicked;  
             return isClicked;      
         }, 
-        
+
+        todoDblClick(index){
+            isClicked = false;
+            this.listToDo[index].done = isClicked;  
+            return isClicked;      
+        }, 
+
         
         /**
         * Function that removes at the given index and checks if the item at that index exist
