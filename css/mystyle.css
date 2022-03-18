@@ -36,10 +36,13 @@ body{
     color: green;
 }
 
-.color-red{
-    color: red;
+.bi-trash-fill:hover{
+    color: rgb(138, 29, 29);
 }
 
+.bi-check-circle:hover{
+    color: rgb(16, 90, 16);
+}
 /* .my-todo-text{
     box-shadow: 1.2px 1.2px 1.2px  rgb(24, 24, 23);
 } */
