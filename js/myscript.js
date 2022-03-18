@@ -10,7 +10,7 @@ const app = new Vue({
         // * nuovo oggetto vuoto 
         newObjectInput: {
             text: "",
-            done:null,
+            done:false,
         },
 
         // * prendo l'input 
@@ -33,6 +33,10 @@ const app = new Vue({
             } else {
                 console.log("to-do item empty");
             }
+        },
+
+        todoClick(){
+            return this.newObjectInput.done = true;
         },
 
         /**

@@ -47,13 +47,13 @@
                     <div class="my-todo-wrapper w-100">
                         <ul v-if="listToDo.length != 0" class="my-todo-list list-unstyled p-1 p-lg-2">
                             <li v-for="(item,index) in listToDo" class="my-todo-item fs-2 p-1 p-lg-3 d-flex justify-content-between">
-                                <p>{{item.text}}</p>
+                                <p @click=" todoClick" :class="(item.done)? 'text-decoration-line-through' : '' ">{{item.text}}</p>
                                 <i @click="removeInput(index)" class="bi bi-trash-fill"></i>
                             </li>
                         </ul>
     
                         <div v-else class="my-todo-empty p-1 p-lg-2">
-                            <p class=" p-1 p-lg-3">To-do list is empty</p>
+                            <p class="p-1 p-lg-3">To-do list is empty</p>
                         </div>
                     </div>
     
