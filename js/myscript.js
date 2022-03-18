@@ -35,15 +35,6 @@ const app = new Vue({
             }
         },
         
-      /*   todoClick(){
-            for(let i = 0; i<this.listToDo.length - 1;i++){
-                isClicked = true;
-                newObject.done = isClicked;  
-                return isClicked;  
-            }
-            
-        }, */
-        
         
         todoClick(index){
             isClicked = true;
