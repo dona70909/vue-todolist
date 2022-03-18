@@ -50,7 +50,7 @@
                                 <p :class="(item.done)? 'text-decoration-line-through' : '' ">
                                     {{item.text}}
                                 </p>
-                                
+
                                 <div>
                                     <i @click="todoClick" :class="(item.done)? 'color-green' : '' " class="bi bi-check-circle"></i>
                                     <i @click="removeInput(index)" class="bi bi-trash-fill"></i>

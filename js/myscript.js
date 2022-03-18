@@ -7,12 +7,6 @@ const app = new Vue({
         listToDo: [
         ],
 
-        // * nuovo oggetto vuoto 
-      /* newObjectInput: {
-            text: "",
-            done:false,
-        }, */
-
         // * prendo l'input 
         toDoContent:"",
 
@@ -27,18 +21,6 @@ const app = new Vue({
          * @param {*} input obtained from an html tag
          * 
          */
-        /*  getInput(input){
-            if(input != ""){
-                this.newObjectInput.text = input;
-                this.listToDo.push(this.newObjectInput);
-                console.log(this.newObjectInput.text);
-                console.log(this.listToDo);
-                this.toDoContent="";
-            } else {
-                console.log("to-do item empty");
-            }
-        }, */
-
         getInput(input){
 
             newObject = this.creatNewObject();
@@ -54,8 +36,21 @@ const app = new Vue({
         },
 
         todoClick(){
-            newObject.done = true;
+            for(let i = 0; i<this.listToDo.length - 1;i++){
+                isClicked = true;
+                newObject.done = isClicked;  
+                return isClicked;  
+            }
+            
         },
+        
+
+        /*  todoClick(){
+            isClicked = true;
+            newObject.done = isClicked;  
+            return isClicked;      
+        }, */
+
 
         /**
          * Function that removes at the given index and checks if the item at that index exist
