@@ -31,6 +31,8 @@ const app = new Vue({
             if(input != ""){
                 this.newObjectInput.text = input;
                 this.listToDo.push(this.newObjectInput);
+                console.log(this.newObjectInput.text);
+                console.log(this.listToDo);
                 this.toDoContent="";
             } else {
                 console.log("to-do item empty");
