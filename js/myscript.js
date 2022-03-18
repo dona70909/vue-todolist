@@ -8,10 +8,10 @@ const app = new Vue({
         ],
 
         // * nuovo oggetto vuoto 
-        newObjectInput: {
+      /* newObjectInput: {
             text: "",
             done:false,
-        },
+        }, */
 
         // * prendo l'input 
         toDoContent:"",
@@ -27,11 +27,25 @@ const app = new Vue({
          * @param {*} input obtained from an html tag
          * 
          */
-        getInput(input){
+        /*  getInput(input){
             if(input != ""){
                 this.newObjectInput.text = input;
                 this.listToDo.push(this.newObjectInput);
                 console.log(this.newObjectInput.text);
+                console.log(this.listToDo);
+                this.toDoContent="";
+            } else {
+                console.log("to-do item empty");
+            }
+        }, */
+
+        getInput(input){
+
+            newObject = this.creatNewObject();
+            if(input != ""){
+                newObject.text = input;
+                this.listToDo.push(newObject);
+                console.log(newObject.text);
                 console.log(this.listToDo);
                 this.toDoContent="";
             } else {
@@ -54,7 +68,14 @@ const app = new Vue({
             } else {
                 console.warn("you can't remove an element that doesn't exist!!");
             }
-        }
+        },
+
+        creatNewObject(){
+            return {
+                text:"",
+                done:false,
+            }
+        } 
 
     }
 })
