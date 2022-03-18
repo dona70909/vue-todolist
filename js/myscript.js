@@ -14,7 +14,9 @@ const app = new Vue({
         },
 
         // * prendo l'input 
-        toDoContent:""
+        toDoContent:"",
+
+        isDone:"",
 
     },
 
@@ -36,7 +38,7 @@ const app = new Vue({
         },
 
         todoClick(){
-            return this.newObjectInput.done = true;
+            this.newObjectInput.done = true;
         },
 
         /**
