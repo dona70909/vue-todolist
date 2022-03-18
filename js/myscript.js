@@ -21,8 +21,8 @@ const app = new Vue({
         },
 
         removeInput(index){
-            if(listToDo[index] != ""){
-                listToDo.splice(index,1);
+            if(this.listToDo[index] != ""){
+                this.listToDo.splice(index,1);
             } else {
                 console.warn("you can't remove an element that doesn't exist!!");
             }

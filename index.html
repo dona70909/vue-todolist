@@ -48,7 +48,7 @@
                     <ul v-if="listToDo.length != 0" class="my-todo-list list-unstyled p-1 p-lg-2">
                         <li v-for="(item,index) in listToDo" class="my-todo-item fs-2 p-1 p-lg-3 d-flex justify-content-between">
                             <p>{{item}}</p>
-                            <i class="bi bi-trash-fill"></i>
+                            <i @click="removeInput(index)" class="bi bi-trash-fill"></i>
                         </li>
                     </ul>
 
