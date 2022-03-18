@@ -15,6 +15,7 @@ const app = new Vue({
         getInput(input){
             if(input != ""){
                 this.listToDo.push(input);
+                this.toDoContent="";
             } else {
                 console.log("to-do item vuoto");
             }
