@@ -35,30 +35,32 @@
     <main id="app" class="p-2">
         <section class="container-fluid">
             <div class="row p-2 p-lg-5">
-                <div class="col-12">
+                <div class="col-12 mb-4">
                     <div class="my-container-input" >
                         <label for="my-todo-text"></label>
                         <input v-model="toDoContent" type="text" id="my-todo-text" class="px-2 py-1" placeholder="to-do text">
                         <button @click="getInput(toDoContent)" class="my-btn-add">Add to-do!</button>
                     </div>
                 </div>
-            </div>
-            <div class="col-12 d-flex justify-content-center">
-                <div class="my-todo-wrapper w-50">
-                    <ul v-if="listToDo.length != 0" class="my-todo-list list-unstyled p-1 p-lg-2">
-                        <li v-for="(item,index) in listToDo" class="my-todo-item fs-2 p-1 p-lg-3 d-flex justify-content-between">
-                            <p>{{item}}</p>
-                            <i @click="removeInput(index)" class="bi bi-trash-fill"></i>
-                        </li>
-                    </ul>
 
-                    <div v-else class="my-todo-empty p-1 p-lg-2">
-                        <p class=" p-1 p-lg-3">To-do list is empty</p>
+                <div class="col-12 d-flex justify-content-center">
+                    <div class="my-todo-wrapper w-50">
+                        <ul v-if="listToDo.length != 0" class="my-todo-list list-unstyled p-1 p-lg-2">
+                            <li v-for="(item,index) in listToDo" class="my-todo-item fs-2 p-1 p-lg-3 d-flex justify-content-between">
+                                <p>{{item}}</p>
+                                <i @click="removeInput(index)" class="bi bi-trash-fill"></i>
+                            </li>
+                        </ul>
+    
+                        <div v-else class="my-todo-empty p-1 p-lg-2">
+                            <p class=" p-1 p-lg-3">To-do list is empty</p>
+                        </div>
                     </div>
+    
+    
                 </div>
-
-
             </div>
+
         </section>
     </main>
 
