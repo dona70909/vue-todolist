@@ -7,27 +7,38 @@ const app = new Vue({
         listToDo: [
         ],
 
-
+        // * nuovo oggetto vuoto 
         newObjectInput: {
             text: "",
             done:null,
         },
 
+        // * prendo l'input 
         toDoContent:""
 
     },
 
     methods: {
 
+        /**
+         * function that get the input value and adds it to a property "text:" of a newObject
+         * @param {*} input obtained from an html tag
+         * 
+         */
         getInput(input){
             if(input != ""){
                 this.newObjectInput.text = input;
                 this.listToDo.push(this.newObjectInput);
                 this.toDoContent="";
             } else {
-                console.log("to-do item vuoto");
+                console.log("to-do item empty");
             }
         },
+
+        /**
+         * Function that removes at the given index and checks if the item at that index exist
+         * @param {*} index given index 
+         */
 
         removeInput(index){
             if(this.listToDo[index] != ""){
