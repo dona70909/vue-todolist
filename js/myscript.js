@@ -22,13 +22,12 @@ const app = new Vue({
         * 
         */
         getInput(input){
-            
             newObject = this.creatNewObject();
             if(input != ""){
                 newObject.text = input;
                 this.listToDo.push(newObject);
                 console.log(newObject.text);
-                console.log(this.listToDo);
+                console.table(this.listToDo);
                 this.toDoContent="";
             } else {
                 console.log("to-do item empty");
